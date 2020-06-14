@@ -1,8 +1,10 @@
 import gameState from "./gameState";
-
-const TICK_RATE = 3000;
+import { TICK_RATE } from "./constants";
+import initButtons from "./buttons";
 
 const init = async () => {
+  initButtons(gameState.handleUserActions);
+
   let nextTimeToTick = Date.now();
 
   const nextAnimationFrame = () => {
