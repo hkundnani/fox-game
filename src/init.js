@@ -1,9 +1,9 @@
-import gameState from "./gameState";
+import gameState, { handleUserActions } from "./gameState";
 import { TICK_RATE } from "./constants";
 import initButtons from "./buttons";
 
 const init = async () => {
-  initButtons(gameState.handleUserActions);
+  initButtons(handleUserActions);
 
   let nextTimeToTick = Date.now();
 
